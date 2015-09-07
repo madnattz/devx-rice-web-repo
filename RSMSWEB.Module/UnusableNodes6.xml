@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options" FormStyle="Ribbon" Skin="Blueprint" UIType="SingleWindowSDI" />
+  <Views Id="Views">
+    <DashboardView Id="CustomFormUsercontroll_ID">
+      <Items Id="Items">
+        <Node Id="@7fc7c18e-3cde-4b39-9760-3334ab4a0ec2" UnusableNodeName="CustomUserControlViewItem" IsNewNode="True" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default_Copy">
+        <Items Id="Items">
+          <Item Id="EventGLID_ListView" ViewId="EventGLID_ListView" />
+        </Items>
+      </Item>
+      <Item Id="CenterReportNav">
+        <Items Id="Items">
+          <Item Id="TestUpload_ListView" ViewId="TestUpload_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="ResultBudget02_ListView" ViewId="ResultBudget02_ListView" />
+          <Item Id="ProjectName_ListView" ViewId="ProjectName_ListView" />
+          <Item Id="PlanBudget02_ListView" ViewId="PlanBudget02_ListView" />
+          <Item Id="PlanBudget02_Detail_ListView" ViewId="PlanBudget02_Detail_ListView" />
+          <Item Id="PlanBudget01_Detail_ListView" ViewId="PlanBudget01_Detail_ListView" />
+          <Item Id="GLID_ListView" ViewId="GLID_ListView" />
+          <Item Id="ActivityName_ListView" ViewId="ActivityName_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

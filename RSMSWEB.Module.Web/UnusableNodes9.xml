@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="ทั่วไป" Caption="นำเข้าข้อมูล Excel" Index="4" />
+      <Item Id="SimsReportMainNav" ViewId="CustomAspxPageViw_DetailView" />
+    </Items>
+  </NavigationItems>
+</Application>

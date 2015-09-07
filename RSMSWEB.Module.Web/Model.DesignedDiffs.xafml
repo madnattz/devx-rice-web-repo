@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems StartupNavigationItem="">
+    <Items>
+      <Item Id="Reports" Index="0" Caption="รายงานสำหรับส่วนกลาง" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="ReportsV2" ViewId="ReportDataV2_ListView" ObjectKey="" Caption="รายงาน" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="Analysis_ListView" ViewId="Analysis_ListView" ObjectKey="" Index="0" IsNewNode="True" />
+          <Item Id="ReportsV2_Plan" ObjectKey="" Caption="แผนและแปลง" Index="1" ViewId="ReportPlan_ListView" IsNewNode="True" />
+          <Item Id="ReportsV2_Audit" ObjectKey="" Caption="ควมคุมคุณภาพ" Index="2" ViewId="ReportAudit_ListView" IsNewNode="True" />
+          <Item Id="ReportsV2_Factory" ObjectKey="" Caption="โรงงาน" Index="3" ViewId="ReportFactory_ListView" IsNewNode="True" />
+          <Item Id="ReportsV2_Account" ObjectKey="" Caption="บัญชี" Index="4" ViewId="ReportAccount_ListView" IsNewNode="True" />
+          <Item Id="SubmitReportLog_ListView" ViewId="SubmitReportLog_ListView" ObjectKey="" Index="5" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="SimsReportMainNav" Caption="รายงานระบบคลังเมล็ดพันธุ์" Index="1" ViewId="CustomAspxPageViw_DetailView" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="SimsReport01_Nav" Index="0" Caption="1. บัญชีรายการรับเมล็ดพันธุ์ซื้อคืน (ดิบ) " ViewId="SimsReport01_DetailView" ImageName="BO_Report" QuickAccessItem="False" IsNewNode="True" />
+          <Item Id="SimsReport02_Nav" Index="1" Caption="2. บัญชีรายการจ่ายเมล็ดพันธุ์ซื้อคืน (ดิบ) " ViewId="SimsReport02_DetailView" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport03_Nav" Index="2" Caption="3. บัญชีรายการรับเมล็ดพันธุ์ดี" ViewId="SimsReport03_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport04_Nav" Index="3" Caption="4. บัญชีรายการจ่ายเมล็ดพันธุ์ดี" ViewId="SimsReport04_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport05_Nav" Index="4" Caption="5. บัญชีเมล็ดพันธุ์ซื้อคืน (ดิบ) คงคลัง " ViewId="SimsReport05_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport06_Nav" Index="5" Caption="6. บัญชีเมล็ดพันธุ์ดีคงคลัง " ViewId="SimsReport06_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport07_Nav" Index="6" Caption="7. บัญชีเมล็ดพันธุ์คัดออกจากกระบวนการผลิต " ViewId="SimsReport07_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport08_Nav" Index="7" Caption="8. รายงานสถานการณ์ตลาดและคลังเมล็ดพันธุ์" ViewId="SimsReport08_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport09_Nav" Index="8" Caption="9. รายงานการจำหน่ายเมล็ดพันธุ์" ViewId="SimsReport09_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport10_Nav" Index="9" Caption="10. รายงานการจำหน่ายเมล็ดพันธุ์ผ่านตัวแทน" ViewId="SimsReport10_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport11_Nav" Index="10" Caption="11. รายงานรายรับจากการจำหน่ายเมล็ดพันธุ์ " ViewId="SimsReport11_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport12_Nav" Index="11" Caption="12. รายงานการจำหน่ายเมล็ดพันธุ์ในพื้นที่ต่างๆ " ViewId="SimsReport12_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport13_Nav" Index="12" Caption="13. รายงานการโอนเมล็ดพันธุ์ " ViewId="SimsReport13_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport14_Nav" Index="13" Caption="14. ทะเบียนผู้ซื้อเมล็ดพันธุ์ " ViewId="SimsReport14_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport15_Nav" Index="14" Caption="15. ทะเบียนรายชื่อตัวแทนจำหน่ายเมล็ดพันธุ์พืช " ViewId="SimsReport15_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport16_Nav" Index="15" Caption="16. บัญชีการสั่งจอง/สำรองเมล็ดพันธุ์ " ViewId="SimsReport16_DetailView" IsNewNode="True" />
+          <Item Id="SimsReport17_Nav" Index="16" Caption="17. บัญชีวัสดุการผลิตคงคลัง" ViewId="SimsReport17_DetailView" IsNewNode="True" />
+          <Item Id="@6cd3d1aa-c208-42ef-8e7e-cdd0de09e280" Caption="xxxxxxxx" Index="9999" ViewId="TestDView" Visible="False" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="SimsReports_Nav" Index="1" Removed="True" />
+      <Item Id="Default_Copy" Index="2">
+        <Items>
+          <Item Id="AccountSettingNav">
+            <Items>
+              <Item Id="AccountBookID_ListView" Index="2" />
+              <Item Id="CheckSubmitReportLog_ListView" Index="3" ViewId="CheckSubmitReportLog_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="ReportCategory_ListView" Index="4" ObjectKey="" ViewId="ReportCategory_ListView" IsNewNode="True" />
+              <Item Id="IncomeAndExpensesOfMonth_ListView" Index="5" ObjectKey="" ViewId="IncomeAndExpensesOfMonth_ListView" Visible="False" IsNewNode="True" />
+              <Item Id="SettingPlan_ListView" Index="5" ViewId="SettingPlan_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="Investment_ListView" Index="6" ObjectKey="" ViewId="Investment_ListView" Visible="False" IsNewNode="True" />
+              <Item Id="CodeGFPV_ListView" Index="7" ObjectKey="" ViewId="CodeGFPV_ListView" IsNewNode="True" />
+              <Item Id="CodeGFRV_ListView" Index="8" ObjectKey="" ViewId="CodeGFRV_ListView" IsNewNode="True" />
+              <Item Id="SettingExpenses_ListView" Index="9" ObjectKey="" ViewId="SettingExpenses_ListView" IsNewNode="True" />
+              <Item Id="SettingIncome_ListView" Index="10" ObjectKey="" ViewId="SettingIncome_ListView" IsNewNode="True" />
+              <Item Id="TrialBalanceTransfer03_ListView" Index="11" ObjectKey="" ViewId="TrialBalanceTransfer03_ListView" IsNewNode="True" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="รายรับ รายจ่าย เงินทุนหมุนฯ" Index="3" />
+      <Item Id="UploadExcelNav" Caption="นำเข้าข้อมูล Excel" Index="4" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="SubmitReportFile_ListView" Index="0" ViewId="SubmitReportFile_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="ตั้งค่า" Index="5" Caption="ตั้งค่าบัญชี" Visible="False">
+        <Items>
+          <Item Id="InvestmentDetail_ListView" Visible="False" Index="0" />
+          <Item Id="IncomeAndExpensesOfMonth_ListView" Index="3" Removed="True" />
+          <Item Id="Investment_ListView" Index="4" Removed="True" />
+          <Item Id="CodeGFPV_ListView" Index="5" Removed="True" />
+          <Item Id="CodeGFRV_ListView" Index="6" Removed="True" />
+          <Item Id="SettingExpenses_ListView" Index="7" Removed="True" />
+          <Item Id="SettingIncome_ListView" Index="8" Removed="True" />
+          <Item Id="TrialBalanceTransfer03_ListView" Index="9" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Default" Visible="False" Index="6">
+        <Items>
+          <Item Id="CheckSubmitReportLog_ListView" Index="0" Removed="True" />
+          <Item Id="SettingPlan_ListView" Index="0" Removed="True" />
+          <Item Id="SubmitReportFile_ListView" Index="0" Removed="True" />
+          <Item Id="ReportCategory_ListView" Index="1" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="CenterReportNav" Removed="True">
+        <Items>
+          <Item Id="Reports" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="ทดสอบ" Visible="False" />
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="14.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="14.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DashboardView Id="SimsReport01_DetailView" Caption="1. บัญชีรายการรับเมล็ดพันธุ์ซื้อคืน (ดิบ) " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report1_searchItem" CustomControlPath="UserControls/ctlSimsReport01.ascx" Caption="Report 1" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+          <LayoutItem Id="Report1_searchItem" ShowCaption="False" ViewItem="Report1_searchItem" SizeConstraintsType="Default" Index="0" RelativeSize="6.9565217391304346" IsNewNode="True" />
+          <LayoutItem Id="Report01_DetailView" Index="1" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="93.043478260869563" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport02_DetailView" Caption="2. บัญชีรายการจ่ายเมล็ดพันธุ์ซื้อคืน(ดิบ)" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report2_searchItem" CustomControlPath="UserControls/ctlSimsReport02.ascx" Caption="Report 2" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report2_searchItem" ShowCaption="False" ViewItem="Report2_searchItem" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport03_DetailView" Caption="3. บัญชีรายการรับเมล็ดพันธุ์ดี" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report3_searchItem" CustomControlPath="UserControls/ctlSimsReport03.ascx" Caption="Report 3" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report3_searchItem" ShowCaption="False" ViewItem="Report3_searchItem" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport04_DetailView" Caption="4. บัญชีรายการจ่ายเมล็ดพันธุ์ดี" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report4_searchItem" CustomControlPath="UserControls/ctlSimsReport04.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report4_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report4_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport05_DetailView" Caption="5. บัญชีเมล็ดพันธุ์ซื้อคืน (ดิบ) คงคลัง " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report5_searchItem" CustomControlPath="UserControls/ctlSimsReport05.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report5_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report5_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport06_DetailView" Caption="6. บัญชีเมล็ดพันธุ์ดีคงคลัง " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report6_searchItem" CustomControlPath="UserControls/ctlSimsReport06.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report6_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report6_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport07_DetailView" Caption="7. บัญชีเมล็ดพันธุ์คัดออกจากกระบวนการผลิต " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report7_searchItem" CustomControlPath="UserControls/ctlSimsReport07.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report7_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report7_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport08_DetailView" Caption="8. รายงานสถานการณ์ตลาดและคลังเมล็ดพันธุ์" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report8_searchItem" CustomControlPath="UserControls/ctlSimsReport08.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report8_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report8_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport09_DetailView" Caption="9. รายงานการจำหน่ายเมล็ดพันธุ์" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report9_searchItem" CustomControlPath="UserControls/ctlSimsReport09.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report9_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report9_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport10_DetailView" Caption="10. รายงานการจำหน่ายเมล็ดพันธุ์" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report10_searchItem" CustomControlPath="UserControls/ctlSimsReport10.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report10_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report10_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport11_DetailView" Caption="11. รายงานรายรับจากการจำหน่ายเมล็ดพันธุ์ " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report11_searchItem" CustomControlPath="UserControls/ctlSimsReport11.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report11_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report11_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport12_DetailView" Caption="12. รายงานรายรับจากการจำหน่ายเมล็ดพันธุ์ " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report12_searchItem" CustomControlPath="UserControls/ctlSimsReport12.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report12_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report12_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport13_DetailView" Caption="13. รายงานการโอนเมล็ดพันธุ์ " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report13_searchItem" CustomControlPath="UserControls/ctlSimsReport13.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report13_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report13_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport14_DetailView" Caption="14. ทะเบียนผู้ซื้อเมล็ดพันธุ์ " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report14_searchItem" CustomControlPath="UserControls/ctlSimsReport14.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report14_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report14_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport15_DetailView" Caption="15. ทะเบียนรายชื่อตัวแทนจำหน่ายเมล็ดพันธุ์พืช " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report15_searchItem" CustomControlPath="UserControls/ctlSimsReport15.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report15_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report15_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport16_DetailView" Caption="16. บัญชีการสั่งจอง/สำรองเมล็ดพันธุ์ " ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report16_searchItem" CustomControlPath="UserControls/ctlSimsReport16.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report16_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report16_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SimsReport17_DetailView" Caption="17. บัญชีวัสดุการผลิตคงคลัง" ImageName="BO_Report" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Report17_searchItem" CustomControlPath="UserControls/ctlSimsReport17.ascx" Caption="Report" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutItem Id="Report17_searchItem" ShowCaption="False" SizeConstraintsType="Default" Index="0" RelativeSize="4.2666666666666666" ViewItem="Report17_searchItem" IsNewNode="True" />
+        <LayoutGroup Id="Main" ShowCaption="False" Index="1" RelativeSize="95.733333333333334" IsNewNode="True">
+          <LayoutItem Id="Report02_DetailView" Index="0" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="test1" Caption="jQueryTest" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="Test111" CustomControlPath="UserControls/jQuerTest.ascx" Caption="Test" Index="0" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" IsNewNode="True">
+          <LayoutItem Id="Test111" ViewItem="Test111" Index="0" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="TestDView" IsNewNode="True">
+      <Items IsNewNode="True">
+        <CustomUserControlViewItemWeb Id="ID111" CustomControlPath="UserControls/Test1zx.ascx" Caption="Test View 1" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" IsNewNode="True">
+          <LayoutItem Id="ID111" ViewItem="ID111" Index="0" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+</Application>

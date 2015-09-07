@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="ระบบบริหารจัดการการผลิตและจำหน่ายเมล็ดพันธุ์ข้าว" Logo="RiceLogo" Company="กรมการข้าว กระทรวงเกษตรและสหกรณ์" Copyright="&amp;copy; 2015 กรมการข้าว กระทรวงเกษตรและสหกรณ์" Description="โปรแกรมระบบการบริหารจัดการการผลิตและจำหน่ายเมล็ดพันธุ์ข้าว" AboutInfoString="{0:ProductName}&lt;br&gt;{0:Description}&lt;br&gt;{0:Version}&lt;br&gt;{0:Copyright}">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="ยกเลิก" />
+      <Action Id="Delete" Caption="ลบ" />
+      <Action Id="Delete Item" Caption="ลบรายการ" />
+      <Action Id="DialogCancel" Caption="ยกเลิก" />
+      <Action Id="DialogOK" Caption="ตกลง" />
+      <Action Id="FullTextSearch" Caption="ค้นหา" NullValuePrompt="กรอกสิ่งที่ต้งการค้นหา" ShortCaption="ค้นหา" />
+      <Action Id="Link" Caption="เลือก" />
+      <Action Id="ListViewShowObject" Caption="เปิด" />
+      <Action Id="Logoff" Caption="ออกจากระบบ" />
+      <Action Id="Logon" Caption="เข้าสู่ระบบ" />
+      <Action Id="NavigateBack" Caption="กลับ" />
+      <Action Id="New" Caption="เพิ่มใหม่" />
+      <Action Id="NextObject" Caption="รายการถัดไป" />
+      <Action Id="PreviousObject" Caption="รายการก่อนหน้า" />
+      <Action Id="Refresh" Caption="รีเฟรช" />
+      <Action Id="Save" Caption="บันทึก" />
+      <Action Id="SaveAndClose" Caption="บันทึกแล้วปิด" />
+      <Action Id="SaveAndNew" Caption="บันทึกแล้วเพิ่มใหม่" />
+      <Action Id="ShowAllContexts" Caption="ตรวจสอบ" />
+      <Action Id="ShowNavigationItem" Caption="เมนู" />
+      <Action Id="Unlink" Caption="เอาออก" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Ass_LoadMember" IsNewNode="True">
+        <ActionLink ActionId="SeedAssosiation.LoadData" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="RecordEdit">
+        <ActionLink ActionId="SeedAssosiation.LoadData" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="RSMSWEB.Module.SeedStatus" ObjectCaptionFormat="{0:SeedStatusName}" />
+    <Class Name="RSMSWEB.Module.SubmitReportLog" ImageName="Action_LocalizationImport" />
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Abort" Value="ยกเลิก" />
+      <LocalizationItem Name="Add" Value="เพิ่ม" />
+      <LocalizationItem Name="Apply" Value="น้ำไปใช้" />
+      <LocalizationItem Name="Back" Value="ย้อนกลับ" />
+      <LocalizationItem Name="Cancel" Value="ยกเลิก" />
+      <LocalizationItem Name="Clear" Value="ล้าง" />
+      <LocalizationItem Name="Close" Value="ปิด" />
+      <LocalizationItem Name="Find" Value="ค้นหา" />
+      <LocalizationItem Name="Ignore" Value="ปล่อยผ่าน" />
+      <LocalizationItem Name="Next" Value="ถัดไป &gt;" />
+      <LocalizationItem Name="No" Value="ไม่" />
+      <LocalizationItem Name="OK" Value="ตกลง" />
+      <LocalizationItem Name="Remove" Value="เอาออก" />
+      <LocalizationItem Name="Retry" Value="&amp;ลองใหม่" />
+      <LocalizationItem Name="Yes" Value="&amp;ใช่" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="CenterReportNav" Caption="รายงานสำหรับส่วนกลาง" Index="0" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Reports" Index="-1" Caption="รายงานสำหรับส่วนกลาง" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="Analysis_ListView" ViewId="Analysis_ListView" ObjectKey="" Visible="False" Index="0" IsNewNode="True" />
+              <Item Id="ReportsV2_Plan" ObjectKey="" Caption="แผนและแปลง" Index="1" ViewId="ReportPlan_ListView" IsNewNode="True" />
+              <Item Id="ReportsV2_Audit" ObjectKey="" Caption="ควมคุมคุณภาพ" Index="2" ViewId="ReportAudit_ListView" IsNewNode="True" />
+              <Item Id="ReportsV2_Factory" ObjectKey="" Caption="โรงงาน" Index="3" ViewId="ReportFactory_ListView" IsNewNode="True" />
+              <Item Id="ReportsV2_Account" ObjectKey="" Caption="บัญชี" Index="4" ViewId="ReportAccount_ListView" IsNewNode="True" />
+              <Item Id="SubmitReportLog_ListView" ViewId="SubmitReportLog_ListView" ObjectKey="" Index="5" Visible="True" IsNewNode="True" />
+              <Item Id="ReportsV2" ViewId="ReportDataV2_ListView" ObjectKey="" Caption="รายงาน" Index="6" Visible="False" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="TestUpload_ListView" ViewId="TestUpload_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="รายงานสำหรับส่วนกลาง" Index="0" Removed="True">
+        <Items>
+          <Item Id="Analysis_ListView" Visible="False" Index="0" />
+          <Item Id="ReportsV2" Caption="รายงาน" Index="1" />
+          <Item Id="SubmitReportLog_ListView" ViewId="SubmitReportLog_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default_Copy" Index="1" Caption="ตั้งค่าข้อมูล" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="EstimateByGrowType_ListView" ViewId="EstimateByGrowType_ListView" ObjectKey="" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="EventGLID_ListView" ViewId="EventGLID_ListView" ObjectKey="" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="PickType_ListView" ViewId="PickType_ListView" ObjectKey="" Visible="False" Index="-1" IsNewNode="True" />
+          <Item Id="ReceiveType_ListView" ViewId="ReceiveType_ListView" ObjectKey="" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="SeedPrice_ListView" ViewId="SeedPrice_ListView" ObjectKey="" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="TransferType_ListView" ViewId="TransferType_ListView" ObjectKey="" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="VacationDetail_ListView" ViewId="VacationDetail_ListView" ObjectKey="" Index="-1" Visible="False" IsNewNode="True" />
+          <Item Id="GeneralSettingNav" Caption="ทั่วไป" Index="0" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="Vacation_ListView" Index="0" ViewId="Vacation_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="VacationSetting_ListView" Index="1" ViewId="VacationSetting_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="PrefixName_ListView" ViewId="PrefixName_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+              <Item Id="Site_ListView" ViewId="Site_ListView" ObjectKey="" Index="3" IsNewNode="True" />
+              <Item Id="OrganizationSection_ListView" ViewId="OrganizationSection_ListView" ObjectKey="" Index="4" Visible="False" Caption="กลุ่มงาน" IsNewNode="True" />
+              <Item Id="Province_ListView" ViewId="Province_ListView" ObjectKey="" Index="5" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="SeedSettingNav" Caption="เมล็ดพันธุ์" Index="1" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="SalePrice_ListView" ViewId="SalePrice_ListView" ObjectKey="" Index="0" Visible="True" Caption="ราคาจำหน่ายเมล็ดพันธุ์" IsNewNode="True" />
+              <Item Id="GrowType_ListView" ViewId="GrowType_ListView" ObjectKey="" Index="1" Caption="วิธีปลูก" IsNewNode="True" />
+              <Item Id="SeedStatus_ListView" ViewId="SeedStatus_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+              <Item Id="Plant_ListView" ViewId="Plant_ListView" ObjectKey="" Index="3" IsNewNode="True" />
+              <Item Id="SeedType_ListView" ViewId="SeedType_ListView" ObjectKey="" Caption="พันธุ์" Index="4" IsNewNode="True" />
+              <Item Id="SeedClass_ListView" ViewId="SeedClass_ListView" ObjectKey="" Caption="ชั้นพันธุ์" Index="5" IsNewNode="True" />
+              <Item Id="Season_ListView" ViewId="Season_ListView" ObjectKey="" Caption="ฤดู" Index="6" IsNewNode="True" />
+              <Item Id="MoneyType_ListView" ViewId="MoneyType_ListView" ObjectKey="" Caption="ประเภทเงินทุน" Index="7" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="AuditSettingNav" Caption="ตรวจสอบคุณภาพ" Index="2" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="QualityAuditStep_ListView" ViewId="QualityAuditStep_ListView" ObjectKey="" Index="0" Visible="False" Caption="ขั้นตอนการตรวจสอบคุณภาพ" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="InventorySettingNav" Caption="คลัง" Index="3" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="Material_ListView" ViewId="Material_ListView" ObjectKey="" Caption="ชนิดวัสดุการผลิต" Index="0" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="AccountSettingNav" Caption="บัญชี" Index="4" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="AccountGroup_ListView" ViewId="AccountGroup_ListView" ObjectKey="" Index="0" IsNewNode="True" />
+              <Item Id="Account_ListView" ViewId="Account_ListView" ObjectKey="" Index="1" IsNewNode="True" />
+              <Item Id="AccountBookID_ListView" ViewId="AccountBookID_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+              <Item Id="ExpenseCategories_ListView" ObjectKey="" ViewId="ExpenseCategories_ListView" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="User_ListView" Index="5" ViewId="User_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Role_ListView" Index="6" ViewId="Role_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default" Index="2" Visible="True">
+        <Items>
+          <Item Id="Role_ListView" Index="0" Removed="True" />
+          <Item Id="SalePrice_ListView" Index="0" />
+          <Item Id="User_ListView" Index="0" Removed="True" />
+          <Item Id="VacationSetting_ListView" Index="0" Removed="True" />
+          <Item Id="AccountBookJV_ListView" ViewId="AccountBookJV_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="AccountBookPV_ListView" ViewId="AccountBookPV_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="AccountBookRV_ListView" ViewId="AccountBookRV_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="AccountPeriod_ListView" ViewId="AccountPeriod_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="AccountType_ListView" ObjectKey="" ViewId="AccountType_ListView" IsNewNode="True" />
+          <Item Id="ActivityName_ListView" ViewId="ActivityName_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="ConfigAccount_ListView" ObjectKey="" ViewId="ConfigAccount_ListView" IsNewNode="True" />
+          <Item Id="CostTypeID_ListView" ObjectKey="" ViewId="CostTypeID_ListView" IsNewNode="True" />
+          <Item Id="EventAccountBID_ListView" ViewId="EventAccountBID_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="EventBringforward_ListView" ViewId="EventBringforward_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="EventPayDateID_ListView" ViewId="EventPayDateID_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Forecast_ListView" ViewId="Forecast_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="GL_ListView" ViewId="GL_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="GLID_ListView" ViewId="GLID_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="PlanBudget01_Detail_ListView" ViewId="PlanBudget01_Detail_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="PlanBudget01_ListView" ViewId="PlanBudget01_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="PlanBudget02_Detail_ListView" ViewId="PlanBudget02_Detail_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="PlanBudget02_ListView" ViewId="PlanBudget02_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="PlanSeedNeed_ListView" ObjectKey="" ViewId="PlanSeedNeed_ListView" IsNewNode="True" />
+          <Item Id="ProjectName_ListView" ViewId="ProjectName_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="ResultBudget01_ListView" ObjectKey="" ViewId="ResultBudget01_ListView" IsNewNode="True" />
+          <Item Id="ResultBudget02_ListView" ViewId="ResultBudget02_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="SeedAssociationDetail_ListView" ViewId="SeedAssociationDetail_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="SeedAssosiation_ListView" ObjectKey="" ViewId="SeedAssosiation_ListView" IsNewNode="True" />
+          <Item Id="SettingPlan_ListView" ObjectKey="" ViewId="SettingPlan_ListView" IsNewNode="True" />
+          <Item Id="SubmitReportLog_ListView" Removed="True" />
+          <Item Id="UnitID_ListView" ObjectKey="" ViewId="UnitID_ListView" IsNewNode="True" />
+          <Item Id="Vacation_ListView" ObjectKey="" ViewId="Vacation_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="กำหนดผังบัญชี" Visible="False" Index="3" Removed="True">
+        <Items>
+          <Item Id="Account_ListView" Removed="True" />
+          <Item Id="AccountBookID_ListView" Removed="True" />
+          <Item Id="AccountGroup_ListView" Removed="True" />
+          <Item Id="AccountPeriod_ListView" Removed="True" />
+          <Item Id="AccountType_ListView" Removed="True" />
+          <Item Id="ConfigAccount_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="พยากรณ์รายได้" Visible="False" Index="5" Removed="True">
+        <Items>
+          <Item Id="Forecast_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="รายการต้นทุนการผลิต" Visible="False" Index="6" Removed="True">
+        <Items>
+          <Item Id="CostTypeID_ListView" Removed="True" />
+          <Item Id="UnitID_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="รายการเบิกจ่ายค่าเงินค่าเมล็ดพันธุ์" Visible="False" Index="7" Removed="True">
+        <Items>
+          <Item Id="EventPayDateID_ListView" Removed="True" />
+          <Item Id="Vacation_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="รายการยอดเงินคงเหลือประจำวัน" Visible="False" Index="8" Removed="True">
+        <Items>
+          <Item Id="EventAccountBID_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="SimsReports_Nav" Caption="รายงานระบบคลังเมล็ดพันธุ์" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="SimsReport01_Nav" Caption="1. บัญชีรายการรับเมล็ดพันธุ์ซื้อคืน(ดิบ)" ViewId="BaseObject_ListView" Index="0" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport02_Nav" Caption="2. บัญชีรายการจ่ายเมล็ดพันธุ์ซื้อคืน(ดิบ)" ViewId="BaseObject_ListView" Index="1" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport03_Nav" Caption="3. บัญชีรายการรับเมล็ดพันธุ์ดี" ViewId="BaseObject_ListView" Index="2" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport04_Nav" Caption="4. บัญชีรายการจ่ายเมล็ดพันธุ์ดี" ViewId="BaseObject_ListView" Index="3" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport05_Nav" Caption="5. บัญชีเมล็ดพันธุ์ซื้อคืน(ดิบ)คงคลัง" ViewId="BaseObject_ListView" Index="4" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport06_Nav" Caption="6. บัญชีเมล็ดพันธุ์ดีคงคลัง" ViewId="BaseObject_ListView" Index="5" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport07_Nav" Caption="7. บัญชีเมล็ดพันธุ์คัดออกจากกระบวนการผลิต" ViewId="BaseObject_ListView" Index="6" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport08_Nav" Caption="8. รายงานสถานการณ์การตลาดและคลังเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="7" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport09_Nav" Caption="9. รายงานการจำหน่ายเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="8" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport10_Nav" Caption="10. รายงานการจำหน่ายเมล็ดพันธุ์ผ่านตัวแทน" ViewId="BaseObject_ListView" Index="9" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport11_Nav" Caption="11. รายงานรายรับจากการจำหน่ายเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="10" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport12_Nav" Caption="12. รายงานการจำหน่ายเมล็ดพันธุ์ในพื้นที่ต่าง ๆ" ViewId="BaseObject_ListView" Index="11" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport13_Nav" Caption="13. รายงานการโอนเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="12" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport14_Nav" Caption="14. ทะเบียนผู้ซื้อเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="13" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport15_Nav" Caption="15. ทะเบียนรายชื่อตัวแทนจำหน่ายเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="14" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport16_Nav" Caption="16. บัญชีการสั่งจอง/สำรองเมล็ดพันธุ์" ViewId="BaseObject_ListView" Index="15" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="SimsReport17_Nav" Caption="17. บัญชีวัสดุการผลิตคงคลัง" ViewId="BaseObject_ListView" Index="16" ImageName="BO_Report" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="รายการยอดยกมา" Visible="False" Removed="True">
+        <Items>
+          <Item Id="EventBringforward_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="สงป. 301" Removed="True">
+        <Items>
+          <Item Id="SettingPlan_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="สมุดรายวัน" Visible="False" Removed="True">
+        <Items>
+          <Item Id="AccountBookJV_ListView" Removed="True" />
+          <Item Id="AccountBookPV_ListView" Removed="True" />
+          <Item Id="AccountBookRV_ListView" Removed="True" />
+          <Item Id="GL_ListView" Removed="True" />
+          <Item Id="GLID_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options FormStyle="Ribbon" Skin="Blueprint" UIType="SingleWindowSDI" DataAccessMode="Server" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="14.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DashboardView Id="CustomFormUsercontroll_ID" Caption="CustomFormUsercontroll" IsNewNode="True" />
+    <ListView Id="ReportAccount_ListView" ClassName="DevExpress.Persistent.BaseImpl.ReportDataV2" Filter="[DisplayName] = '01. งบทดลองรายศูนย์' Or [DisplayName] = '02. รายได้รายศูนย์' Or [DisplayName] = '03. สรุปผลเบิกจ่ายเกษตรกร' Or [DisplayName] = '04. รายงานผลเบิกจ่ายเกษตรกร' Or [DisplayName] = '05. สรุปต้นทุนเมล็ดพันธุ์' Or [DisplayName] = '06. รายงานสัมพันธ์งบทดลอง' Or [DisplayName] = '07. งบทดลองรายไตรมาส' Or [DisplayName] = '08. รายงานรวมตัวเลขตัวชี้วัดรายได้' Or [DisplayName] = '09. รายงานรวมตัวเลขตัวชี้วัดค่าใช้จ่าย' Or [DisplayName] = '10. รายงานสงป.301' Or [DisplayName] = '11. รายงานสงป.302' Or [DisplayName] = '12. รายงานโครงการ สงป.302' Or [DisplayName] = '13. รายงาน แผนการรับ - จ่าย เงินประจำปีงบประมาณ' Or [DisplayName] = '14. รายงาน ผลการรับ - จ่าย เงินประจำเดือน' Or [DisplayName] = '15. รายงานรายรับ-รายจ่าย เงินทุนหมุนเวียน' Or [DisplayName] = '16. สรุปการนำส่งรายงานรายรับ - รายจ่าย  (งท.03)' Or [DisplayName] = '17. สรุปการนำส่งการเบิกจ่ายเกษตรกร' Or [DisplayName] = '18. สรุปการนำส่งต้นทุนการผลิตเมล็ดพันธุ์' Or [DisplayName] = '19. สรุปการนำส่งรายงานรายไตรมาส (งบดุล งบรายได้ค่าใช้จ่าย)' Or [DisplayName] = '20. สรุปการนำส่งรายงาน สงป.'" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="IsInplaceReport" PropertyName="IsInplaceReport" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsPredefined" PropertyName="IsPredefined" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ParametersObjectType" PropertyName="ParametersObjectType" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="DataTypeCaption" PropertyName="DataTypeCaption" Width="70" Index="1" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="ReportAudit_ListView" ClassName="DevExpress.Persistent.BaseImpl.ReportDataV2" Criteria="[DisplayName] = '1. รายงานผลการทดสอบคุณภาพเมล็ดพันธุ์เพื่อยืนยันคุณภาพ/ก่อนจัดทำแปลง' Or [DisplayName] = '2. แบบบันทึกการตรวจตัดสินแปลงขยายพันธุ์ข้าวอย่างเป็นทางการ' Or [DisplayName] = '3. รายงานผลการตรวจตัดสินคุณภาพแปลงขยายพันธุ์' Or [DisplayName] = '4. รายงานปริมาณข้าวแดงที่ตรวจพบในการทดสอบคุณภาพเมล็ดพันธ์ข้าว' Or [DisplayName] = '5. รายงานผลการตรวจสอบคุณภาพเมล็ดพันธุ์ข้าว' Or [DisplayName] = '6. รายงานปริมาณการตรวจสอบคุณภาพเมล็ดพันธุ์ข้าวประจำเดือน' Or [DisplayName] = '7. รายงานผลการตรวจสอบคุณภาพเมล็ดพันธุ์ระหว่างการเก็บรักษา' Or [DisplayName] = '8. ประวัติคุณภาพเมล็ดพันธุ์' Or [DisplayName] = '9. สรุปแผนและผลการดำเนินงานตามกิจกรรมในกระบวนการผลิตเมล็ดพันธุ์'" Caption="รายงาน" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="DataTypeCaption" PropertyName="DataTypeCaption" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsInplaceReport" PropertyName="IsInplaceReport" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsPredefined" PropertyName="IsPredefined" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ParametersObjectType" PropertyName="ParametersObjectType" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" Caption="รายงาน" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="ReportFactory_ListView" ClassName="DevExpress.Persistent.BaseImpl.ReportDataV2" Criteria="[DisplayName] = '1. แบบแผนสรุปผลการปรับปรุงสภาพเมล็ดพันธุ์รายวัน'" Caption="รายงาน" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="DataTypeCaption" PropertyName="DataTypeCaption" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsInplaceReport" PropertyName="IsInplaceReport" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsPredefined" PropertyName="IsPredefined" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ParametersObjectType" PropertyName="ParametersObjectType" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" Caption="รายงาน" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="ReportPlan_ListView" ClassName="DevExpress.Persistent.BaseImpl.ReportDataV2" Criteria="[DisplayName] = '1. รายชื่อเกษตรกรแนบข้อตกลงการจัดทำแปลงขยายพันธุ์พืช (ขพ.2)' Or [DisplayName] = '2. รายชื่อเกษตรกรผู้จัดทำแปลงขยายพันธุ์ (ขพ.3)' Or [DisplayName] = '3. ประมาณการผลผลิตเพื่อการจัดซื้อเมล็ดพันธุ์คืนจากแปลงขยายพันธุ์ (ขพ.5)' Or [DisplayName] = '4. แผนและผลการจัดทำแปลงขยายพันธุ์ (สมข 20103)'" Caption="รายงาน" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="DataTypeCaption" PropertyName="DataTypeCaption" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsInplaceReport" PropertyName="IsInplaceReport" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsPredefined" PropertyName="IsPredefined" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ParametersObjectType" PropertyName="ParametersObjectType" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" Caption="รายงาน" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SeedAssosiation_DetailView" ImageName="BO_Country_v92">
+      <Items>
+        <ActionContainerViewItem Id="Ass_LoadMember" ActionContainer="Ass_LoadMember" Caption="แสดงข้อมูลสมาชิกสมาคม/ชมรม" IsNewNode="True" />
+        <ActionContainerViewItem Id="LoadData" Caption="ดึงข้อมูล" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.985200845665965">
+            <LayoutGroup Id="SeedAssosiation" RelativeSize="100" Direction="Vertical" Caption="สมาคมผู้รวบรวมและจำหน่ายเมล็ดพันธุ์">
+              <LayoutGroup Id="SeedAssosiation_col1" RelativeSize="100">
+                <TabbedGroup Id="Item3" CaptionLocation="Top" Index="0" RelativeSize="83.333333333333329" IsNewNode="True">
+                  <LayoutGroup Id="Item1" ShowCaption="True" Caption="ที่ทำการสมาคม" CaptionLocation="Top" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutGroup Id="Auto3660db40-00e1-4ae0-83c9-231b441b2413" ShowCaption="False" Caption="Auto3660db40-00e1-4ae0-83c9-231b441b2413(6)" Index="0" RelativeSize="49.440298507462686" IsNewNode="True">
+                      <LayoutItem Id="Address.AddressNo" ViewItem="Address.AddressNo" SizeConstraintsType="Default" Index="0" RelativeSize="20" IsNewNode="True" />
+                      <LayoutItem Id="Address.Village" ViewItem="Address.Village" SizeConstraintsType="Default" Index="1" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.SubStreet" ViewItem="Address.SubStreet" SizeConstraintsType="Default" Index="2" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.District" ViewItem="Address.District" SizeConstraintsType="Default" Index="3" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.ZipCode" ViewItem="Address.ZipCode" SizeConstraintsType="Default" Index="4" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.Fax" ViewItem="Address.Fax" SizeConstraintsType="Default" Index="5" RelativeSize="20" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto51d324e2-d3ac-441d-86f8-b75c705ab775" ShowCaption="False" Caption="Auto51d324e2-d3ac-441d-86f8-b75c705ab775(13)" Index="1" RelativeSize="50.559701492537314" IsNewNode="True">
+                      <LayoutItem Id="Address.Moo" ViewItem="Address.Moo" SizeConstraintsType="Default" Index="0" RelativeSize="20" IsNewNode="True" />
+                      <LayoutItem Id="Address.Street" ViewItem="Address.Street" SizeConstraintsType="Default" Index="1" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.Province" ViewItem="Address.Province" SizeConstraintsType="Default" Index="2" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.SubDistrict" ViewItem="Address.SubDistrict" SizeConstraintsType="Default" Index="3" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.Tel" ViewItem="Address.Tel" SizeConstraintsType="Default" Index="4" RelativeSize="15" IsNewNode="True" />
+                      <LayoutItem Id="Address.Email" ViewItem="Address.Email" SizeConstraintsType="Default" Index="5" RelativeSize="20" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </TabbedGroup>
+                <LayoutItem Id="Address.District" SizeConstraintsType="Default" RelativeSize="9.375" Index="1" Removed="True" />
+                <LayoutItem Id="Address.SubStreet" SizeConstraintsType="Default" RelativeSize="8.5714285714285712" Index="1" Removed="True" />
+                <LayoutGroup Id="Auto0c6fd922-4783-40ae-8c3a-257c93ec0f8d" ShowCaption="False" Caption="Auto0c6fd922-4783-40ae-8c3a-257c93ec0f8d(20)" Direction="Horizontal" Index="1" RelativeSize="16.666666666666668" IsNewNode="True">
+                  <LayoutItem Id="SearchData" ViewItem="SearchData" SizeConstraintsType="Default" Index="0" RelativeSize="49.4661921708185" IsNewNode="True" />
+                  <LayoutItem Id="Ass_LoadMember" ViewItem="Ass_LoadMember" SizeConstraintsType="Default" Index="1" RelativeSize="19.750889679715304" IsNewNode="True" />
+                  <LayoutItem Id="Item2" ShowCaption="False" SizeConstraintsType="Default" Index="2" RelativeSize="30.782918149466191" ViewItem="" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Address.Street" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" Index="2" Removed="True" />
+                <LayoutItem Id="Address.SubDistrict" SizeConstraintsType="Default" RelativeSize="9.375" Index="2" Removed="True" />
+                <LayoutItem Id="Address.Province" SizeConstraintsType="Default" RelativeSize="11.428571428571429" Index="9" Removed="True" />
+                <LayoutItem Id="Address.AddressNo" SizeConstraintsType="Default" RelativeSize="9.75609756097561" Removed="True" />
+                <LayoutItem Id="Address.Moo" SizeConstraintsType="Default" RelativeSize="7.3170731707317076" Removed="True" />
+                <LayoutItem Id="Address.Village" SizeConstraintsType="Default" RelativeSize="7.8947368421052628" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="SeedAssosiation_col2" RelativeSize="49.88399071925754" Caption="SeedAssosiation_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Address.Email" Removed="True" />
+                <LayoutItem Id="Address.Fax" Removed="True" />
+                <LayoutItem Id="Address.LastUodateDate" Removed="True" />
+                <LayoutItem Id="Address.LastUpdateBy" Removed="True" />
+                <LayoutItem Id="Address.Status" Removed="True" />
+                <LayoutItem Id="Address.Tel" Removed="True" />
+                <LayoutItem Id="Address.ZipCode" Removed="True" />
+                <LayoutItem Id="SearchData" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SeedAssociationLists_Group" Direction="Vertical" RelativeSize="41.014799154334035">
+            <LayoutItem Id="SeedAssociationLists" SizeConstraintsType="Default" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SeedAssosiation_ListView" ImageName="BO_Country_v92">
+      <Columns>
+        <ColumnInfo Id="FullAddress" Width="225" />
+        <ColumnInfo Id="Address.AddressNo" Removed="True" />
+        <ColumnInfo Id="Address.District" Removed="True" />
+        <ColumnInfo Id="Address.Email" Removed="True" />
+        <ColumnInfo Id="Address.Fax" Removed="True" />
+        <ColumnInfo Id="Address.FullAddress" Removed="True" />
+        <ColumnInfo Id="Address.LastUodateDate" Removed="True" />
+        <ColumnInfo Id="Address.LastUpdateBy" Removed="True" />
+        <ColumnInfo Id="Address.Moo" Removed="True" />
+        <ColumnInfo Id="Address.Province" Removed="True" />
+        <ColumnInfo Id="Address.Street" Removed="True" />
+        <ColumnInfo Id="Address.SubDistrict" Removed="True" />
+        <ColumnInfo Id="Address.SubStreet" Removed="True" />
+        <ColumnInfo Id="Address.Tel" Removed="True" />
+        <ColumnInfo Id="Address.Village" Removed="True" />
+        <ColumnInfo Id="Address.ZipCode" Removed="True" />
+        <ColumnInfo Id="SearchData" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="SeedAssosiation_SeedAssociationLists_ListView" ImageName="BO_Department">
+      <Columns>
+        <ColumnInfo Id="ItemNo" Index="0" SortOrder="Ascending" />
+        <ColumnInfo Id="FullName" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SeedStatus_DetailView" ObjectCaptionFormat="{0:SeedStatusName}">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SeedStatus" Caption="ข้อมูลสถานะเมล็ดพันธุ์ " />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Site_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="SiteType" GroupIndex="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SubmitReportLog_DetailView" AllowDelete="False" AllowNew="False" AllowEdit="False" />
+    <ListView Id="SubmitReportLog_ListView" AllowDelete="False" AllowNew="False" AutoExpandAllGroups="True">
+      <Columns>
+        <ColumnInfo Id="ReportName" Index="0" SortOrder="Ascending" GroupIndex="0" />
+        <ColumnInfo Id="SiteNo" Index="1" />
+        <ColumnInfo Id="SiteName" Index="2" Width="280" SortIndex="-1" SortOrder="None" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

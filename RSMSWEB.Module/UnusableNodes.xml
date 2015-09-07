@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="CustomForm" CustomFormTypeName="Inventory.Module.Win.Controls.WinCustomForm" />
+          <Item Id="MyDetails" Caption="รายละเอียดผู้ใช้" />
+          <Item Id="Role_ListView" Caption="กลุ่มผู้ใช้งาน" />
+          <Item Id="User_ListView" Caption="ผู้ใช้ระบบ" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options Id="Options" FormStyle="Ribbon" Skin="Blueprint" UIType="SingleWindowSDI" />
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Confirmations">
+      <LocalizationItem Name="Cancel" Value="ท่านต้องการยกเลิกรายการที่แก้ไขหรือไม่?" />
+      <LocalizationItem Name="ConfirmForcedCloseWindow" Value="หากปิดหน้าต่างนี้ ข้อมูลที่ท่านได้แก้ไขไว้จะยังไม่ได้บันทึก ท่านต้องการปิดหน้าต่างนี้ใช่หรือไม่? \ r \ nWarning : ถ้าคุณคลิกที่ปุ่ม ' ใช่ ' การเปลี่ยนแปลง ทั้งหมดจะหายไป" />
+      <LocalizationItem Name="Save" Value="คุณต้องการบันทึกข้อมูลใช่หรือไม่ ?" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationGroup Name="Security">
+          <LocalizationItem Name="LoginFailed" Value="ไม่สามารถเข้าสู่ระบบได้ for '{0}'. {1}" />
+          <LocalizationItem Name="NewPasswordIsEqualToOldPassword" Value="รหัสผ่านใหม่ตรงกับรหัสผ่านเดิมที่เคยใช้" />
+          <LocalizationItem Name="OldPasswordIsWrong" Value="ระบุรหัสผ่านเดิมไม่ถูกต้อง" />
+          <LocalizationItem Name="PasswordsAreDifferent" Value="รหัสผ่านและยืนยันรหัสผ่านไม่ตรงกัน." />
+          <LocalizationItem Name="RetypeTheInformation" Value="ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง" />
+          <LocalizationItem Name="UserNameIsEmpty" Value="ไม่อนุญาตให้ชื่อผู้ใช้เว้นว่างได้" />
+        </LocalizationGroup>
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="About Info" Caption="เกี่ยวกับ..." />
+      <Action Id="CancelAction" Caption="ยกเลิก" />
+      <Action Id="ChangePasswordByUser" Caption="เปลี่ยนรหัสผ่าน" />
+      <Action Id="ChooseSkin" Caption="เปลี่ยน สกิน" />
+      <Action Id="CloneObject" Caption="คัดลอก." />
+      <Action Id="Close" Caption="ปิด" />
+      <Action Id="EditModel" Caption="แก้ไขโมเดล" />
+      <Action Id="Exit" Caption="ออก" />
+      <Action Id="OpenObject" Caption="ดูข้อมูล" />
+      <Action Id="PageSetup" Caption="ตั้งค่าหน้ากระดาษ" />
+      <Action Id="PreviewReport" Caption="ดูรายงาน" />
+      <Action Id="Print" Caption="พิมพ์" />
+      <Action Id="PrintPreview" Caption="มุมมองรายงาน" />
+      <Action Id="ResetPassword" Caption="Reset รหัสผ่าน" />
+      <Action Id="ShowInReport" Caption="แสดงบนรายงาน" />
+      <Action Id="ShowReportDesigner" Caption="แก้ไขหน้ารายงาน" />
+    </Actions>
+  </ActionDesign>
+  <Views Id="Views">
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items Id="Items">
+        <StaticText Id="LogonText" Text="ยินดีต้อนรับ กรุณากรอกชื่อผู้ใช้และรหัสผ่านด้านล่าง" />
+        <PropertyEditor Id="Password" Caption="รหัสผ่าน" />
+        <PropertyEditor Id="UserName" Caption="ชื่อผู้ใช้" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ChangePasswordOnLogonParameters_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="ConfirmPassword" Caption="ยืนยันรหัสผ่าน" />
+        <PropertyEditor Id="NewPassword" Caption="รหัสผ่านใหม่" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ChangePasswordParameters_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="ConfirmPassword" Caption="ยืนยันรหัสผ่าน" />
+        <PropertyEditor Id="NewPassword" Caption="รหัสผ่านใหม่" />
+        <PropertyEditor Id="OldPassword" Caption="รหัสผ่านเดิม" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResetPasswordParameters_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Password" Caption="รหัสผ่านของท่าน" />
+        <StaticText Id="ResetPasswordText" Text="กรณี Reset Password ท่านจะต้องจำรหัสผ่านนี้ไว้เพื่อใช้ในการ ล็อคอิน ครั้งต่อไปและควรเก็บรหัสผ่านไว้เป็นความลับ" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

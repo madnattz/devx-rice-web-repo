@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options" FormStyle="Ribbon" Skin="Blueprint" UIType="SingleWindowSDI" />
+  <Views Id="Views">
+    <ListView Id="SeedAssosiation_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Address.Status" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="CenterReportNav">
+        <Items Id="Items">
+          <Item Id="TestUpload_ListView" ViewId="TestUpload_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="TestUpload_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

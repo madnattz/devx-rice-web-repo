@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options" FormStyle="Ribbon" Skin="Blueprint" UIType="SingleWindowSDI" />
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="รายรับ รายจ่าย เงินทุนหมุนฯ" Visible="False" />
+      <Item Id="CenterReportNav">
+        <Items Id="Items">
+          <Item Id="TestUpload_ListView" ViewId="TestUpload_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="Vacation_ListView" Index="0" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

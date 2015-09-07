@@ -1,0 +1,3 @@
+﻿Public Class CenterReportResultIncomeAndExpensesOfMonth
+
+End Class

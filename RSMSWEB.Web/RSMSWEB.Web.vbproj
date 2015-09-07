@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69846592-140B-46FB-B947-BD7D53A1E8BB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>RSMSWEB.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RSMSWEB.WebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RSMSWEB.WebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RSMSWEB.WebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>EASYTEST</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.2.Web, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Images.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2.UI, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2.Web, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.2.Presets, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.2.Win, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraMap.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2.Extensions, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2.Web, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\..\..\EEI\Phase II\EEIWebService\EEIWebService\Bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserControls\ctlSimsReport17.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport17.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport17.ascx.vb">
+      <DependentUpon>ctlSimsReport17.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport16.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport16.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport16.ascx.vb">
+      <DependentUpon>ctlSimsReport16.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport15.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport15.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport15.ascx.vb">
+      <DependentUpon>ctlSimsReport15.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport14.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport14.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport14.ascx.vb">
+      <DependentUpon>ctlSimsReport14.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport13.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport13.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport13.ascx.vb">
+      <DependentUpon>ctlSimsReport13.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport12.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport12.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport12.ascx.vb">
+      <DependentUpon>ctlSimsReport12.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport11.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport11.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport11.ascx.vb">
+      <DependentUpon>ctlSimsReport11.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport10.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport10.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport10.ascx.vb">
+      <DependentUpon>ctlSimsReport10.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport09.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport09.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport09.ascx.vb">
+      <DependentUpon>ctlSimsReport09.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport08.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport08.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport08.ascx.vb">
+      <DependentUpon>ctlSimsReport08.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport07.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport07.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport07.ascx.vb">
+      <DependentUpon>ctlSimsReport07.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport06.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport06.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport06.ascx.vb">
+      <DependentUpon>ctlSimsReport06.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport05.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport05.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport05.ascx.vb">
+      <DependentUpon>ctlSimsReport05.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport04.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport04.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport04.ascx.vb">
+      <DependentUpon>ctlSimsReport04.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport03.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport03.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport03.ascx.vb">
+      <DependentUpon>ctlSimsReport03.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport02.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport02.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport02.ascx.vb">
+      <DependentUpon>ctlSimsReport02.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\jQuerTest.ascx.designer.vb">
+      <DependentUpon>jQuerTest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\jQuerTest.ascx.vb">
+      <DependentUpon>jQuerTest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport01.ascx.designer.vb">
+      <DependentUpon>ctlSimsReport01.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctlSimsReport01.ascx.vb">
+      <DependentUpon>ctlSimsReport01.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Test1zx.ascx.designer.vb">
+      <DependentUpon>Test1zx.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Test1zx.ascx.vb">
+      <DependentUpon>Test1zx.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webservices\Class\Account\AccCostDetail.vb" />
+    <Compile Include="webservices\Class\Account\AccCostHeader.vb" />
+    <Compile Include="webservices\Class\Account\AccountGFMISDetailPVDatas.vb" />
+    <Compile Include="webservices\Class\Account\AccountGFMISDetailRVDatas.vb" />
+    <Compile Include="webservices\Class\Account\PayDateDetail.vb" />
+    <Compile Include="webservices\Class\Account\PayDateHeader.vb" />
+    <Compile Include="webservices\Class\Account\PlanBudgetDetail01.vb" />
+    <Compile Include="webservices\Class\Account\PlanBudgetDetail02.vb" />
+    <Compile Include="webservices\Class\Account\PlanBudgetDetailMonth01.vb" />
+    <Compile Include="webservices\Class\Account\PlanBudgetDetailMonth02.vb" />
+    <Compile Include="webservices\Class\Account\PlanBudgetHeader01.vb" />
+    <Compile Include="webservices\Class\Account\PlanBudgetHeader02.vb" />
+    <Compile Include="webservices\Class\Account\PlanTrialBalanceTransfer03.vb" />
+    <Compile Include="webservices\Class\Account\ResultBudget01.vb" />
+    <Compile Include="webservices\Class\Account\ResultBudget02.vb" />
+    <Compile Include="webservices\Class\Account\ResultIncomeAndExpensesMonth.vb" />
+    <Compile Include="webservices\Class\Account\ResultMonthExpensesData.vb" />
+    <Compile Include="webservices\Class\Account\ResultMonthIncomeData.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceDetail.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceHeader.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceMonthDetail.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceMonthHeader.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceQuarterDetail.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceQuarterHeader.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceTransferExpensesData.vb" />
+    <Compile Include="webservices\Class\Account\TrialBalanceTransferIncomeData.vb" />
+    <Compile Include="ReferenceClass\DataUtil.vb" />
+    <Compile Include="ReferenceClass\SeedReferenceData.vb" />
+    <Compile Include="SimsReports\Report17.aspx.designer.vb">
+      <DependentUpon>Report17.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report17.aspx.vb">
+      <DependentUpon>Report17.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report16.aspx.designer.vb">
+      <DependentUpon>Report16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report16.aspx.vb">
+      <DependentUpon>Report16.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report15.aspx.designer.vb">
+      <DependentUpon>Report15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report15.aspx.vb">
+      <DependentUpon>Report15.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report14.aspx.designer.vb">
+      <DependentUpon>Report14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report14.aspx.vb">
+      <DependentUpon>Report14.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report13.aspx.designer.vb">
+      <DependentUpon>Report13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report13.aspx.vb">
+      <DependentUpon>Report13.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report12.aspx.designer.vb">
+      <DependentUpon>Report12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report12.aspx.vb">
+      <DependentUpon>Report12.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report11.aspx.designer.vb">
+      <DependentUpon>Report11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report11.aspx.vb">
+      <DependentUpon>Report11.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report10.aspx.designer.vb">
+      <DependentUpon>Report10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report10.aspx.vb">
+      <DependentUpon>Report10.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report09.aspx.designer.vb">
+      <DependentUpon>Report09.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report09.aspx.vb">
+      <DependentUpon>Report09.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report08.aspx.designer.vb">
+      <DependentUpon>Report08.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report08.aspx.vb">
+      <DependentUpon>Report08.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report07.aspx.designer.vb">
+      <DependentUpon>Report07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report07.aspx.vb">
+      <DependentUpon>Report07.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report06.aspx.designer.vb">
+      <DependentUpon>Report06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report06.aspx.vb">
+      <DependentUpon>Report06.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report05.aspx.designer.vb">
+      <DependentUpon>Report05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report05.aspx.vb">
+      <DependentUpon>Report05.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report04.aspx.designer.vb">
+      <DependentUpon>Report04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report04.aspx.vb">
+      <DependentUpon>Report04.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report03.aspx.designer.vb">
+      <DependentUpon>Report03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report03.aspx.vb">
+      <DependentUpon>Report03.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report01.aspx.designer.vb">
+      <DependentUpon>Report01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report01.aspx.vb">
+      <DependentUpon>Report01.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SimsReports\Report02.aspx.designer.vb">
+      <DependentUpon>Report02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimsReports\Report02.aspx.vb">
+      <DependentUpon>Report02.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="webservices\Class\Audit\CheckFarmDetail.vb" />
+    <Compile Include="webservices\Class\Audit\CheckFarmHeader.vb" />
+    <Compile Include="webservices\Class\Audit\CheckFarmSummaryDetail.vb" />
+    <Compile Include="webservices\Class\Audit\CheckFarmSummaryHeader.vb" />
+    <Compile Include="webservices\Class\Audit\CheckQualityDetail.vb" />
+    <Compile Include="webservices\Class\Audit\CheckQualityForMonthData.vb" />
+    <Compile Include="webservices\Class\Audit\CheckQualityHeader.vb" />
+    <Compile Include="webservices\Class\Audit\CheckRedSeedData.vb" />
+    <Compile Include="webservices\Class\Audit\QualityActivityDetail.vb" />
+    <Compile Include="webservices\Class\Audit\QualityActivityHeader.vb" />
+    <Compile Include="webservices\Class\Audit\QualityBetweenStorageDetail.vb" />
+    <Compile Include="webservices\Class\Audit\QualityBetweenStorageHeader.vb" />
+    <Compile Include="webservices\Class\Audit\QualityForBuyDetail.vb" />
+    <Compile Include="webservices\Class\Audit\QualityForBuyHeader.vb" />
+    <Compile Include="webservices\Class\Audit\QualityHistoryDetail.vb" />
+    <Compile Include="webservices\Class\Audit\QualityHistoryHeader.vb" />
+    <Compile Include="webservices\Class\Factory\DailyProcessDetail.vb" />
+    <Compile Include="webservices\Class\Factory\DailyProcessHeader.vb" />
+    <Compile Include="webservices\Class\Plan\ActivityPlanReportData.vb" />
+    <Compile Include="webservices\Class\Plan\BuyPlanDetail.vb" />
+    <Compile Include="webservices\Class\Plan\HarvestPlanDetail.vb" />
+    <Compile Include="webservices\Class\Plan\GrowPlanDetail.vb" />
+    <Compile Include="webservices\Class\Plan\KP5ReportDetail.vb" />
+    <Compile Include="webservices\Class\Plan\KP5ReportData.vb" />
+    <Compile Include="webservices\Class\Plan\KP3ReportDetail.vb" />
+    <Compile Include="webservices\Class\Plan\KP3ReportData.vb" />
+    <Compile Include="webservices\Class\Plan\KP2ReportDetail.vb" />
+    <Compile Include="webservices\Class\Plan\KP2ReportData.vb" />
+    <Compile Include="webservices\Class\Sims\ReceiveSeed.vb" />
+    <Compile Include="webservices\DBController\SimsDBController.vb" />
+    <Compile Include="webservices\DBController\WebserviceDBController.vb" />
+    <Compile Include="webservices\RiceService.asmx.vb">
+      <DependentUpon>RiceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.designer.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogonCustom.ascx.designer.vb">
+      <DependentUpon>LogonCustom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LogonCustom.ascx.vb">
+      <DependentUpon>LogonCustom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WebApplication.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\togledown.gif" />
+    <Content Include="Images\togleup.gif" />
+    <Content Include="Scripts\1_27.js" />
+    <Content Include="Scripts\2_15.js" />
+    <Content Include="Scripts\THDateEdit.js" />
+    <Content Include="SimsReports\Report17.aspx" />
+    <Content Include="SimsReports\Report16.aspx" />
+    <Content Include="SimsReports\Report15.aspx" />
+    <Content Include="SimsReports\Report14.aspx" />
+    <Content Include="SimsReports\Report13.aspx" />
+    <Content Include="SimsReports\Report12.aspx" />
+    <Content Include="SimsReports\Report11.aspx" />
+    <Content Include="SimsReports\Report10.aspx" />
+    <Content Include="SimsReports\Report09.aspx" />
+    <Content Include="SimsReports\Report08.aspx" />
+    <Content Include="SimsReports\Report07.aspx" />
+    <Content Include="SimsReports\Report06.aspx" />
+    <Content Include="SimsReports\Report05.aspx" />
+    <Content Include="SimsReports\Report04.aspx" />
+    <Content Include="SimsReports\Report03.aspx" />
+    <Content Include="SimsReports\Report01.aspx" />
+    <Content Include="SimsReports\Report02.aspx" />
+    <Content Include="Style\rice_style.css" />
+    <Content Include="UserControls\ctlSimsReport17.ascx" />
+    <Content Include="UserControls\ctlSimsReport16.ascx" />
+    <Content Include="UserControls\ctlSimsReport15.ascx" />
+    <Content Include="UserControls\ctlSimsReport14.ascx" />
+    <Content Include="UserControls\ctlSimsReport13.ascx" />
+    <Content Include="UserControls\ctlSimsReport12.ascx" />
+    <Content Include="UserControls\ctlSimsReport11.ascx" />
+    <Content Include="UserControls\ctlSimsReport10.ascx" />
+    <Content Include="UserControls\ctlSimsReport09.ascx" />
+    <Content Include="UserControls\ctlSimsReport08.ascx" />
+    <Content Include="UserControls\ctlSimsReport07.ascx" />
+    <Content Include="UserControls\ctlSimsReport06.ascx" />
+    <Content Include="UserControls\ctlSimsReport05.ascx" />
+    <Content Include="UserControls\ctlSimsReport04.ascx" />
+    <Content Include="UserControls\ctlSimsReport03.ascx" />
+    <Content Include="UserControls\ctlSimsReport02.ascx" />
+    <Content Include="UserControls\jQuerTest.ascx" />
+    <Content Include="UserControls\ctlSimsReport01.ascx" />
+    <Content Include="UserControls\Test1zx.ascx" />
+    <Content Include="webservices\RiceService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebApplication.resx">
+      <DependentUpon>WebApplication.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogonCustom.ascx" />
+    <Content Include="Model.xafml" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Web.Config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
+    <None Include="Web.EasyTest.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
+    <None Include="Web.Release.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RSMSWEB.Module.Web\RSMSWEB.Module.Web.vbproj">
+      <Project>{E9AED738-5288-4E61-A29F-786425877AC8}</Project>
+      <Name>RSMSWEB.Module.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RSMSWEB.Module\RSMSWEB.Module.vbproj">
+      <Project>{F622EA3C-2609-4BB3-B589-6B1F2CFBB035}</Project>
+      <Name>RSMSWEB.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2151</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:42308/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

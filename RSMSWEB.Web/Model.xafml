@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="14.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="14.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="ล็อกอิน">
+      <Items>
+        <StaticText Id="LogonText" Text="กรุณาใส่ข้อมูล Username และ password เพื่อล็อกอินเข้าสู่ระบบ" />
+        <PropertyEditor Id="Password" Caption="รหัสผ่าน" />
+        <PropertyEditor Id="UserName" Caption="ชื่อผู้ใช้งาน" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>
